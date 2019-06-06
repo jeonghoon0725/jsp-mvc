@@ -1,0 +1,16 @@
+select * from tab;
+
+create table a_member(
+	email	varchar2(30) not null primary key,
+	pw		varchar2(20) not null,
+	name	varchar2(20)
+);
+
+select * from a_member where email='aa@naver.com' and pw='cometrue';
+
+insert into a_member(email, pw, name)
+values('aa@naver.com', 'cometrue', 'aa');
+insert into a_member(email, pw, name)
+values('bb@naver.com', 'cometrue', 'bb');
+insert into a_member(email, pw, name)
+values('cc@naver.com', 'cometrue', 'cc');
