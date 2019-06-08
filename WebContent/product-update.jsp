@@ -72,7 +72,7 @@
                   <input type="hidden" name="pno" value="${product.pno }">
                   <div class="form-group">
                     <label for="email-login">ProductName</label>
-                    <input id="email-login" name="name" value="${product.name}" type="text" class="form-control">
+                    <input id="email-login" name="name" type="text" class="form-control" value="${product.name}">
                   </div>
                   <div class="form-group">
                     <label for="password-login">Price</label>

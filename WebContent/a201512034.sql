@@ -30,7 +30,7 @@ select * from ja_034_product;
 
 create table ja_034_product(
 	pno		number(7) not null primary key,
-	name		varchar2(30) not null,
+	name		varchar2(300) not null,
 	price		number(10) not null,
 	cno			varchar2(10) not null,
 	color		varchar2(20),

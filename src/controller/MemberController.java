@@ -190,16 +190,9 @@ public class MemberController extends HttpServlet {
 		String email = request.getParameter("email");
 		String pw = request.getParameter("pw");
 		
-//		MemberDTO member = new MemberDTO();		//dao에 넘길 MemberDTO자료형 member객체 생성
-//		member.setEmail(email);
-//		member.setPw(pw);
-//		
 		dto = dao.login(email,pw); //dao 로그인 실행 리턴형(memberDTO)
-//		rs = stmt.executeQuery("select * from ja_034_member where email = '"+email+"' and pw = '"+pw+"'");
-//		
-
 		
-		if(dto != null) {
+		if(dto.getEmail() != null) {
 			request.setAttribute("name", dto.getName());
 			session.setAttribute("email", dto.getEmail());
 			request.getRequestDispatcher("login-success.jsp").forward(request, response);
@@ -207,7 +200,40 @@ public class MemberController extends HttpServlet {
 		else
 			request.getRequestDispatcher("login-fail.jsp").forward(request, response);
 	}
-
+	
+	
+	/*
+	private void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+		String email = request.getParameter("email");
+		String pw = request.getParameter("pw");
+		
+//		MemberDTO member = new MemberDTO();		//dao에 넘길 MemberDTO자료형 member객체 생성
+//		member.setEmail(email);
+//		member.setPw(pw);
+//		
+		dto = dao.login(email,pw); //dao 로그인 실행 리턴형(memberDTO)
+//		rs = stmt.executeQuery("select * from ja_034_member where email = '"+email+"' and pw = '"+pw+"'");
+//		
+//		//statement 객체로 지정된 sql 실행, result set을 반환받음
+//		if(rs.next()) { // 질의 결과에 다음 레코드가 존재하면 true, 아니면 false
+//			dto = new MemberDTO();
+//			//if(email.equals(rs.getString(1)) && pw.equals(rs.getString(2))) {
+//			dto.setEmail(rs.getString(1));
+//			dto.setPw(rs.getString(2));
+//			dto.setName(rs.getString(3));
+//			dto.setPhone(rs.getString(4));
+//		}
+//		//HttpSession session = request.getSession();
+		
+		if(dto.getEmail() != null) {
+			request.setAttribute("name", dto.getName());
+			session.setAttribute("email", dto.getEmail());
+			request.getRequestDispatcher("login-success.jsp").forward(request, response);
+		}
+		else
+			request.getRequestDispatcher("login-fail.jsp").forward(request, response);
+	}
+*/
 	
 	
 	private void list(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {

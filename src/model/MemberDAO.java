@@ -89,12 +89,42 @@ public class MemberDAO extends DAOBase{
 		return result;
     	
     }
+    
+
+    public MemberDTO login(String email,String pw) {
+    	dto = new MemberDTO();
+    	try {
+        	conn = getConnection();
+        	pstmt = conn.prepareStatement("select * from ja_034_member where email = ? and pw = ?");
+        
+        	pstmt.setString(1, email);
+        	pstmt.setString(2, pw);
+        	
+        	rs = pstmt.executeQuery();
+        	if(rs.next()) {
+        	dto.setEmail(rs.getString(1));
+			dto.setPw(rs.getString(2));
+			dto.setName(rs.getString(3));
+			dto.setPhone(rs.getString(4));
+        	}
+        	return dto;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+    	finally { 
+			this.closeDBResources(rs, stmt, pstmt, conn);
+		}
+		return dto;
+    }
+    
+    /*
+     * 
     public MemberDTO login(String email,String pw) {
     	dto = new MemberDTO(); //로그인 결과 member를 보내주기 위해 생성
     	try {
     		conn = getConnection();
 			stmt = conn.createStatement();
-			
+			//pstmt = conn.prepareStatement("select * from ja_034_member where email = '"+email+"' and pw = '"+pw+"'");
 			rs = stmt.executeQuery("select * from ja_034_member where email = '"+email+"' and pw = '"+pw+"'"); //쿼리 실행
 			
 			//statement 객체로 지정된 sql 실행, result set을 반환받음
@@ -115,6 +145,7 @@ public class MemberDAO extends DAOBase{
 		}
 		return dto;//실패해서 null로 반환하는 부분
 	}
+	*/
 		//HttpSession session = request.getSession();
     public MemberDTO info(String email) {
     	dto = new MemberDTO();

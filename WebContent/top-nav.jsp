@@ -94,7 +94,7 @@
             <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
             <div id="navigation" class="navbar-collapse collapse">
               <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item dropdown active"><a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle">Home <b class="caret"></b></a>
+                <li class="nav-item dropdown"><a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle">Home <b class="caret"></b></a>
                   <ul class="dropdown-menu">
                     <li class="dropdown-item"><a href="index.jsp" class="nav-link">Option 1: Default Page</a></li>
                     <li class="dropdown-item"><a href="index2.jsp" class="nav-link">Option 2: Application</a></li>
@@ -139,29 +139,19 @@
                       <div class="row">
                         <div class="col-lg-6"><img src="img/template-homepage.png" alt="" class="img-fluid d-none d-lg-block"></div>
                         <div class="col-lg-3 col-md-6">
-                          <h5>Portfolio</h5>
+                          <h5>회원관리</h5>
                           <ul class="list-unstyled mb-3">
-                            <li class="nav-item"><a href="portfolio-2.jsp" class="nav-link">2 columns</a></li>
-                            <li class="nav-item"><a href="portfolio-no-space-2.jsp" class="nav-link">2 columns with negative space</a></li>
-                            <li class="nav-item"><a href="portfolio-3.jsp" class="nav-link">3 columns</a></li>
-                            <li class="nav-item"><a href="portfolio-no-space-3.jsp" class="nav-link">3 columns with negative space</a></li>
-                            <li class="nav-item"><a href="portfolio-4.jsp" class="nav-link">4 columns</a></li>
-                            <li class="nav-item"><a href="portfolio-no-space-4.jsp" class="nav-link">4 columns with negative space</a></li>
-                            <li class="nav-item"><a href="portfolio-detail.jsp" class="nav-link">Portfolio - detail</a></li>
-                            <li class="nav-item"><a href="portfolio-detail-2.jsp" class="nav-link">Portfolio - detail 2</a></li>
+                          	<li class="nav-item"><a href="customer-login.jsp" class="nav-link">로그인</a></li>
+                          	<li class="nav-item"><a href="customer-register.jsp" class="nav-link">회원등록</a></li>
+                          	<li class="nav-item"><a href="member-list.do" class="nav-link">회원목록</a></li>
+                         	<li class="nav-item"><a href="customer-update.jsp" class="nav-link">회원정보수정</a></li>
                           </ul>
                         </div>
                         <div class="col-lg-3 col-md-6">
-                          <h5>About</h5>
-                          <ul class="list-unstyled mb-3">
-                            <li class="nav-item"><a href="about.jsp" class="nav-link">About us</a></li>
-                            <li class="nav-item"><a href="team.jsp" class="nav-link">Our team</a></li>
-                            <li class="nav-item"><a href="team-member.jsp" class="nav-link">Team member</a></li>
-                            <li class="nav-item"><a href="services.jsp" class="nav-link">Services</a></li>
-                          </ul>
-                          <h5>Marketing</h5>
-                          <ul class="list-unstyled">
-                            <li class="nav-item"><a href="packages.jsp" class="nav-link">Packages</a></li>
+                          <h5>상품관리</h5>
+                          <ul class="list-unstyled mb-3">                        
+                         	<li class="nav-item"><a href="product-list.do" class="nav-link">상품목록</a></li>
+                            <li class="nav-item"><a href="product-register.jsp" class="nav-link">상품추가</a></li>
                           </ul>
                         </div>
                       </div>
