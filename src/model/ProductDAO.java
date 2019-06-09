@@ -70,9 +70,7 @@ public class ProductDAO extends DAOBase{
     	// 질의문 채우기
 		 try {
 		   conn = getConnection();
-		   pstmt = 
-					conn.prepareStatement("insert into ja_034_product(pno, name, price, cno, regdate, image) " + 
-						 		"values(p_seq.nextval, ?, ?, ?, ?, ?)"); // 질의문 생성
+		   pstmt = conn.prepareStatement("insert into ja_034_product(pno, name, price, cno, regdate, image) values(p_seq.nextval, ?, ?, ?, ?, ?)"); // 질의문 생성
 				 
 			pstmt.setString(1, dto.getName());
 			pstmt.setInt(2, dto.getPrice()); // 두번째 물음표를 대체

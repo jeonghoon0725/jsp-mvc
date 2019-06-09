@@ -51,7 +51,7 @@ public class MemberDAO extends DAOBase{
     	int result = 0;
     	try {
         conn = getConnection();
-		pstmt = conn.prepareStatement("insert into ja_034_member " + "values(?, ?, ?, ?)");
+		pstmt = conn.prepareStatement("insert into ja_034_member values(?, ?, ?, ?)");
 		pstmt.setString(1, dto.getEmail());//첫번째 물음표를 대체
 		pstmt.setString(2, dto.getPw()); //두번째 물음표 대체
 		pstmt.setString(3, dto.getName());

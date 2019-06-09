@@ -282,18 +282,6 @@ public class ProductController extends HttpServlet {
 		dto.setImage((String)request.getAttribute("image"));
 		
 		int result = dao.insert(dto);
-		
-//		 pstmt = 
-//				 conn.prepareStatement("insert into ja_034_product(pno, name, price, cno, image) " + 
-//				 		"values(p_seq.nextval, ?, ?, ?, ?)"); // 질의문 생성
-//		 // 질의문 채우기
-//		 pstmt.setString(1, request.getParameter("name")); // 첫번째 물음표를 대체
-//		 pstmt.setInt(2, Integer.parseInt(request.getParameter("price"))); // 두번째 물음표를 대체
-//		 pstmt.setString(3, request.getParameter("cno")); // 프로덕트 레지스터 name부븐 속성 가져오기
-//		 pstmt.setString(4, (String) request.getAttribute("image")); // 이미지는 Attribute로 해야함 , Attribute는 자료형 (String)맞춰야함
-//		 
-		
-//		int result = pstmt.executeUpdate();// 질의문을 실행
 			
 		if(result >= 1) { // 등록 성공
 			request.setAttribute("name",  request.getParameter("name")); // map구조 (key와 value로 구성)
@@ -301,15 +289,6 @@ public class ProductController extends HttpServlet {
 		}
 		else
 			request.getRequestDispatcher("product-fail.jsp").forward(request, response);
-		
-		
-		/*
-		System.out.println(request.getParameter("name"));
-		System.out.println(request.getParameter("image"));
-		
-		System.out.println(request.getAttribute("name"));
-		System.out.println(request.getAttribute("image"));
-		*/
 	}
 
 	/**

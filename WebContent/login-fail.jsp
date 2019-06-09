@@ -48,7 +48,7 @@
             <div class="box">
               <p class="text-center"><a href="index.jsp"><img src="img/logo1-small.png" alt="Obaju template"></a></p>
               <h3>로그인 실패</h3>
-              <h4 class="text-muted"><%= (String) request.getAttribute("name") %>님 반갑습니다.</h4>
+              <h4 class="text-muted"><%= (String) request.getAttribute("name") %>님 로그인 실패입니다.</h4>
               <p class="buttons"><a href="index.html" class="btn btn-template-outlined"><i class="fa fa-home"></i> Go to Homepage</a></p>
             </div>
           </div>
